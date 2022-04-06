@@ -14,7 +14,7 @@ const importData = async () => {
    
 
      await players.insertMany(playersdata)
-    await buyer.insertMany(buyersdata)
+    // await buyer.insertMany(buyersdata)
 
     console.log('Data Imported!')
     process.exit()

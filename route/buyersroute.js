@@ -2,6 +2,7 @@ import express from 'express'
 const router=express.Router()
 import asynchandler from 'express-async-handler'
 import buyer from '../Model/buyer.js'
+import players from '../Model/player.js'
 
 router.get("/:id", asynchandler(async (req, res) => {
     try {
@@ -33,6 +34,24 @@ router.get("/allbuyers",asynchandler(async(req,res)=>{
         }
 }))
 
+router.post("/login", asynchandler(async (req, res) => {
+    try {
+        
+        let firstname = req.body.firstname;
+        let email = req.body.email;
+
+        let user = await buyer.find({ email: email });
+
+        if (user) {
+            res.status(200).send(user);
+        } else {
+            res.status(404).send("the user not found");
+        }
+    } catch (e) {
+        console.log(e);
+        res.status(505).send("Internal server error");
+    }
+}))
 
 
     

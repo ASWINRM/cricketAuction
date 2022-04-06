@@ -16,6 +16,9 @@ const Playerschema=new Schema({
         required:true,
         unique:true
     },
+    image: {
+      type:String  
+    },
     Age: {
         type: Number,
         required:true
@@ -50,6 +53,10 @@ const Playerschema=new Schema({
     },
     Wickets: {
         type:Number
+    },
+    sold: {
+        type: Boolean,
+        default:false
     }
    
 },{timestamps:true},{collection: 'players'})

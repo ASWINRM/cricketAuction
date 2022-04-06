@@ -3,6 +3,7 @@ const playersdata=[
         Firstname: "Shikhar",
         Lastname: "Dhawan",
         email: "shikhardawan123@gmail.com",
+        image:"https://res.cloudinary.com/memogram/image/upload/v1649252230/cricketAuction/shikar_guul54.webp",
         Age: 36,
         matches: 170,
         Category: "batsman",
@@ -11,12 +12,14 @@ const playersdata=[
         Noofmatchplayed: 159,
         Basicprice: 10000000,
         Runs: 4579,
-        Wickets:0
+        Wickets: 0,
+        sold:false
     },
      {
          Firstname: "virat",
          Lastname: "kolhi",
          email: "viratkolhi123@gmail.com",
+         image:"https://res.cloudinary.com/memogram/image/upload/v1649252290/cricketAuction/virat_jjoyx6.webp",
          Age: 33,
          matches: 220,
          Category: "batsman",
@@ -25,7 +28,8 @@ const playersdata=[
          Noofmatchplayed: 210,
          Basicprice: 20000000,
          Runs: 6341,
-         Wickets:0  
+         Wickets: 0,
+         sold:false
     }
 ]
 
