@@ -1,0 +1,37 @@
+{
+  "name": "cricketauction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "data:import": "node Seeder.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASWINRM/cricketAuction.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ASWINRM/cricketAuction/issues"
+  },
+  "homepage": "https://github.com/ASWINRM/cricketAuction#readme",
+  "dependencies": {
+    "cloudinary": "^1.29.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-async-handler": "^1.2.0",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.2.10",
+    "morgan": "^1.10.0",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "uuid": "^8.3.2",
+    "validator": "^13.7.0"
+  }
+}
