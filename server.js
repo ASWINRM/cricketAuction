@@ -8,6 +8,8 @@ import Seeder from './Seeder.js'
 dotenv.config();
 const app = express()
 import playerroute from './route/playerroute.js'
+import buyersroute from './route/buyersroute.js'
+import AuctionRoute from './route/AuctionRoute.js'
 const __dirname = path.resolve()
 app.use(cors())
 app.use(express.json())
@@ -33,7 +35,8 @@ app.get('/', async(req, res) => {
 })
 
 app.use('/players', playerroute);
-
+app.use('/buyers', buyersroute);
+app.use('/auction', AuctionRoute);
 process.on('unhandledRejection', (err, Promise) => {
     console.log("logged error " + err)
     server.close(() => process.exit(1))

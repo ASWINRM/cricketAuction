@@ -3,11 +3,11 @@ const Schema = mongoose.Schema;
 import connectDB from '../db.js';
 connectDB();
 const Auctionschema=new Schema({
-    buyer: {
+    buyerperson: {
        type:mongoose.Types.ObjectId,
         ref:"buyer"
     },
-    players: [
+    playerslist: [
         {
             playerid: {
                  type:mongoose.Types.ObjectId,
@@ -29,6 +29,6 @@ const Auctionschema=new Schema({
 
 
 
-const buyers= mongoose.models.user||mongoose.model("Auction",Auctionschema);
+const Auction= mongoose.models.user||mongoose.model("Auction",Auctionschema);
 
-export default buyers;
+export default Auction;

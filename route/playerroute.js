@@ -9,6 +9,7 @@ router.get("/playerdetails",asynchandler(async(req,res)=>{
             let allplayers = await players.find({});
 
             if (allplayers) {
+                // console.log(allplayers);
                 res.status(200).send(allplayers);
             } 
         } catch (e) {

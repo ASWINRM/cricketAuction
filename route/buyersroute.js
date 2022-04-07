@@ -36,11 +36,11 @@ router.get("/allbuyers",asynchandler(async(req,res)=>{
 
 router.post("/login", asynchandler(async (req, res) => {
     try {
-        
+        console.log(req.body.user);
         let firstname = req.body.firstname;
         let email = req.body.email;
-
-        let user = await buyer.find({ email: email });
+        console.log(email);
+        let user = await buyer.find({ email:email });
 
         if (user) {
             res.status(200).send(user);
